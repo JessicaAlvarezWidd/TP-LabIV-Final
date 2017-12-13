@@ -48,6 +48,8 @@ Puede ver las estadisticas del los locales.<br>
 
 <h1>Ayuda del sistema para un cliente</h1><br>
 
+<img src='https://github.com/JessicaAlvarezWidd/TP-LabIV-Final/blob/master/ayudaScreen/Ayuda0.jpg'/><br>
+
 <img src='https://github.com/JessicaAlvarezWidd/TP-LabIV-Final/blob/master/ayudaScreen/Ayuda1.jpg'/><br>
 
 <img  src='https://github.com/JessicaAlvarezWidd/TP-LabIV-Final/blob/master/ayudaScreen/Ayuda2.jpg' /><br>
@@ -55,6 +57,8 @@ Puede ver las estadisticas del los locales.<br>
 <img  src='https://github.com/JessicaAlvarezWidd/TP-LabIV-Final/blob/master/ayudaScreen/Ayuda3.jpg' /><br>
 
 <h1>Ayuda del sistema para un Empleado o Encargado</h1><br>
+
+<img src='https://github.com/JessicaAlvarezWidd/TP-LabIV-Final/blob/master/ayudaScreen/Ayuda0.jpg'/><br>
 
 <img   src='https://github.com/JessicaAlvarezWidd/TP-LabIV-Final/blob/master/ayudaScreen/Ayuda1.jpg' /><br>
 
