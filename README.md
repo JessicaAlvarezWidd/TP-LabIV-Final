@@ -26,24 +26,24 @@ Puede ver sus ultimas operaciones.<br>
 </div>
 <h1>Operatoria Empleado</h1><br>
 <div>
-Puede realizar pedidos. 
-Puede ver todos los pedidos y marcarlos como recibidos.
-Puede generar clientes y ver la lista de usuarios pero no podra modificar dicha lista.
-Puede dar de alta productos.
+Puede realizar pedidos.<br> 
+Puede ver todos los pedidos y marcarlos como recibidos.<br>
+Puede generar clientes y ver la lista de usuarios pero no podra modificar dicha lista.<br>
+Puede dar de alta productos.<br>
 </div>
 <h1>Operatoria Encargado:</h1><br>
 <div>
-Puede realizar pedidos. 
-Puede ver todos los pedidos y marcarlos como recibidos.
-Puede ver la lista de usuarios y puede agregar y modificar usuarios del tipo empleado o cliente. 
-Posee acceso a ver los locales y modificarlos. 
-Puede agregar, modificar o dar de baja un producto.
+Puede realizar pedidos.<br> 
+Puede ver todos los pedidos y marcarlos como recibidos.<br>
+Puede ver la lista de usuarios y puede agregar y modificar usuarios del tipo empleado o cliente.<br> 
+Posee acceso a ver los locales y modificarlos.<br> 
+Puede agregar, modificar o dar de baja un producto.<br>
 </div>
 <h1>Operatoria Administrador:</h1><br>
 <div>
-Puede dar de alta a cualquier tipo de usuario. Puede modificar y eliminar cualquier usuario registrado.
-Puede dar de alta, modificar o eliminar locales.
-Puede ver las estadisticas del los locales.
+Puede dar de alta a cualquier tipo de usuario. Puede modificar y eliminar cualquier usuario registrado.<br>
+Puede dar de alta, modificar o eliminar locales.<br>
+Puede ver las estadisticas del los locales.<br>
 </div>
 
 <h1>Ayuda del sistema para un cliente</h1><br>
