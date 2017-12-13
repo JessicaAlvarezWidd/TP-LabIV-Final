@@ -62,6 +62,8 @@ Puede ver las estadisticas del los locales.<br>
 
 <img   src='https://github.com/JessicaAlvarezWidd/TP-LabIV-Final/blob/master/ayudaScreen/Ayuda1.jpg' /><br>
 
+<img  src='https://github.com/JessicaAlvarezWidd/TP-LabIV-Final/blob/master/ayudaScreen/Ayuda2.jpg' /><br>
+
 <img  src='https://github.com/JessicaAlvarezWidd/TP-LabIV-Final/blob/master/ayudaScreen/Ayuda2-5empleado.jpg' /><br>
 
 <img  src='https://github.com/JessicaAlvarezWidd/TP-LabIV-Final/blob/master/ayudaScreen/Ayuda3.jpg' /><br>
