@@ -1,0 +1,69 @@
+<div class="container">  
+  <div class="row">    
+    
+    <div class="col-md-12">
+      
+      <div class="row titulo" >Pedidos</div>
+
+        <div  *ngFor="let pedido of pedidos;let i = index">
+
+          <div class="row detallepedido" [ngStyle]="{'background-color': Quecolor(pedido.estado)}">          
+
+            <div class="row">
+                <div class="row">Datos del Usuario</div>
+                <hr>
+                  <div class="col-md-3" style="text-align: center;">Nombre</div>
+                  <div class="col-md-3" style="text-align: center;">Apellido</div>
+                  <div class="col-md-4" style="text-align: center;">Direccion</div>
+                  <div class="col-md-2" style="text-align: center;">Telefono</div>
+            </div>
+            
+              <div class="row">
+                  <div class="col-md-3" style="text-align: center;">{{pedido.nombre}}</div>
+                  <div class="col-md-3" style="text-align: center;">{{pedido.apellido}}</div>
+                  <div class="col-md-4" style="text-align: center;">{{pedido.diruser}}</div>
+                  <div class="col-md-2" style="text-align: center;">{{pedido.telefono}}</div>
+            </div>
+         
+             <div class="row">
+                <div class="row">Datos del Local</div>
+                <hr>
+                  <div class="col-md-6" style="text-align: center;">Direccion: {{pedido.direccion}}</div>
+                  <div class="col-md-6" style="text-align: center;">Fecha del Pedido: {{pedido.fecha}}</div>
+
+             </div>           
+             <br>
+            <div class="row">
+                <div class="row">Detalles del Pedido</div>
+              <hr>
+                  <div class="col-md-3">Nombre</div>
+                  <div class="col-md-3" style="text-align: center;">Precio Unitario</div>
+                  <div class="col-md-3" style="text-align: center;">Cantidad</div>
+                  <div class="col-md-3" style="text-align: center;">P. Total Unitario</div>
+            </div>
+
+              <div class="row" *ngFor="let p of detalleProd;">
+                  <div *ngIf="p.id_pedido==pedido.id_pedido" class="col-md-3"><img src='{{p.foto1}}' style="border-radius: 100%;margin-right: 2%;" width='35px' height='35px'/>  {{p.nombre}}</div>
+                  <div *ngIf="p.id_pedido==pedido.id_pedido" class="col-md-3" style="text-align: center;">{{p.preciounitario}}</div>
+                  <div *ngIf="p.id_pedido==pedido.id_pedido" class="col-md-3" style="text-align: center;">{{p.cantidad}}</div>
+                  <div *ngIf="p.id_pedido==pedido.id_pedido" class="col-md-3" style="text-align: center;">{{p.preciototalunitario}}</div>
+            </div>
+            <div class="row">    
+            <hr>            
+              <div class="col-md-9">Estado: {{pedido.estado}}</div>
+              <div class="col-md-3" style="text-align: center;">Total: {{pedido.monto}}</div>
+            </div>
+            <br>
+            <br>
+            <div class="row" *ngIf="pedido.estado=='Espera' && (Usuario.tipo!='Cliente')">
+              <div class="col-md-12 divbtn" (click)="cambiarEstado(pedido.id_pedido)"><i class="material-icons">check_circle</i> Marcar como Recibido</div>
+            </div>
+
+          </div> 
+
+        </div>  
+       
+
+    </div>
+  </div>
+</div>

@@ -1,0 +1,42 @@
+.mislider{
+    margin-top: -21px;
+}
+
+.contenido{
+    /*background-color: #a31b27;*/
+    background-color: 	#5D5656;
+}
+
+#titulo{
+    text-align: center;
+    color: #C51515;
+    font-size: 3em;
+    font-weight: bold;
+    
+}
+
+.midiv{
+    color: white;
+    padding-left: 5%;
+    padding-right: 5%;
+    text-align: center;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    font-size: 21px;
+}
+
+.especialrow
+{
+ margin-top: 1%;
+ margin-bottom: 1%;
+}
+
+
+agm-map {
+  height: 300px;
+}
+
+#titulodos{
+    color: white;
+    text-align: center;
+}

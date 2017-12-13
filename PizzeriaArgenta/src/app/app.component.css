@@ -1,0 +1,19 @@
+
+
+.navbar-default {
+    background-color: #5D5656 !important;
+    border-color: #5D5656 !important;
+    }
+
+ .navbar-default .navbar-nav>li>a {
+    color: white !important;
+}   
+
+
+ .navbar-default .navbar-nav>li>a:hover {
+    color: #b79592 !important;
+ }
+
+ .navbar-default .navbar-nav>li:active {
+    color: #b79592 !important;
+ }

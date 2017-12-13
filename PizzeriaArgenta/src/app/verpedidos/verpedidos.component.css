@@ -1,0 +1,48 @@
+.container{
+    background-color: rgba(53, 50, 50, 0.86);
+    margin-left: 2%;
+    margin-right: 2%;
+    width: auto;
+    margin-top: 3%;
+    padding-top: 4%;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-bottom: 4%;
+    color: white;
+}
+
+.titulo{
+    text-align: center;
+    margin-bottom: 5%;
+    font-weight: bold;
+    font-size: xx-large;
+}
+
+.detallepedido{
+    background-color: rgba(84, 82, 34, 0.94);
+    border-radius: 6px;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    padding-left: 6%;
+    padding-right: 5%;
+    margin-bottom: 2%;
+}
+hr{
+    border:1px solid #23100a;
+}
+
+
+div.divbtn{
+    text-align: center;
+    background-color: #5b4b45;
+    width: 96%;
+    margin-left: 2%;
+    height: 44px;
+    line-height: 3.5;
+    margin-top: 5%;
+    box-shadow: 2px 4px 2px rgba(0, 0, 0, 0.53);
+}
+
+div.divbtn:hover{
+    cursor: pointer;
+}

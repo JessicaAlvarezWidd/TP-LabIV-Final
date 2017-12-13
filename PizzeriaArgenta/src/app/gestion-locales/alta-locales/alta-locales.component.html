@@ -1,0 +1,105 @@
+<div class="container">
+   <label>Alta de Locales</label>
+   <form [formGroup]="formLocal">
+      <!--<div class="container">-->
+         <div class="row">
+            <div class="col-md-12">
+               <input placeholder="Direccion" autocorrect="off" autocapitalize="off" spellcheck="off" type="text" class="form-control" [(ngModel)]="datoLugar"
+               #search formControlName="direccion">
+               <div *ngIf="formLocal.controls['direccion'].hasError('required') && formLocal.controls['direccion'].touched" class="alert alert-danger">Debes agregar tu Direccion</div>
+               <div *ngIf="formLocal.controls['direccion'].hasError('pattern') && formLocal.controls['direccion'].touched" class="alert alert-danger">Solo podes ingresar letras y/o números</div>
+               <br>
+            </div>
+         </div>
+         <div class="row">
+            <div class="col-md-6">
+               <label>Seleccioná un Encargado</label>
+               <div *ngFor="let em of encargadosSel">
+                  <input type="radio" value="{{em.id_emp}}" formControlName="encargado" (change)="elegirEncargado=false">{{em.nombre}}
+                  {{em.apellido}}<br>
+               </div>
+               <div *ngIf="elegirEncargado" class="alert alert-danger">Debes seleccionar un Encargado</div>
+            </div>
+            <div class="col-md-6">
+               <label>Seleccioná Empleados</label>
+               <div class="col-6" *ngFor="let em of empleadosSel">
+                  <input (change)="verificarCantEmpleados()" [ngModelOptions]="{standalone: true}" [(ngModel)]="em.checked" name="em.nombre"
+                  type="checkbox" value="em.value">{{em.nombre}} {{em.apellido}}
+               </div>
+               <div *ngIf="elegirEmpleado" class="alert alert-danger">Debes seleccionar al menos 2 Empleados</div>
+            </div>
+         </div>
+         <div class="row">
+            <div class="col-md-12">
+               <label>Seleccioná Productos</label>
+               <div class="col-12" *ngFor="let p of productosSel">
+                  <input (change)="verificarCantProd()" [ngModelOptions]="{standalone: true}" [(ngModel)]="p.checked" name="p.nombre" type="checkbox"
+                  value="p.value">{{p.nombre}}
+               </div>
+               <div *ngIf="elegirProductos" class="alert alert-danger">Debes seleccionar al menos 1 producto</div>
+            </div>            
+         </div>
+         <br>
+         <br>
+         <table style="width: 100%">
+            <tr>
+               <td>
+                  <div class="row">
+                     <label class="label label-primary">Foto 1</label><br/>
+                  </div>
+               </td>
+               <td>
+                  <div class="row">
+                     <label class="label label-primary">Foto 2</label><br/>
+                  </div>
+               </td>
+               <td>
+                  <div class="row">
+                     <label class="label label-primary">Foto 3</label><br/>
+                  </div>
+               </td>
+            </tr>
+            <tr style="width:100%">
+               <td style="width:33%">
+                  <label class="uploader" ondragover="return false;" [class.loaded]="loaded" [style.outlineColor]="dragging ? activeColor : baseColor"
+                  (dragenter)="handleDragEnter()" (dragleave)="handleDragLeave()" (drop)="handleDrop($event)">
+                  <i class="icon icon-upload" [style.color]="dragging 
+                     ? ((imageSrc.length > 0) ? overlayColor : activeColor)
+                     : ((imageSrc.length > 0) ? overlayColor : baseColor)"></i>
+                  <img [src]="imageSrc" (load)="handleImageLoad()" [class.loaded]="imageLoaded" />
+                  <input type="file" id="file1" formControlName="file1" accept="image/*"
+                     (change)="handleInputChange($event)">
+                  </label>
+               </td>
+               <td style="width:33%">
+                  <label class="uploader" ondragover="return false;" [class.loaded]="loaded" [style.outlineColor]="dragging ? activeColor : baseColor"
+                  (dragenter)="handleDragEnter()" (dragleave)="handleDragLeave()" (drop)="handleDrop($event)">
+                  <i class="icon icon-upload" [style.color]="dragging 
+                     ? ((imageSrc.length > 0) ? overlayColor : activeColor)
+                     : ((imageSrc.length > 0) ? overlayColor : baseColor)"></i>
+                  <img [src]="imageSrc2" (load)="handleImageLoad()" [class.loaded]="imageLoaded" />
+                  <input type="file" id="file2" formControlName="file2" accept="image/*"
+                     (change)="handleInputChange($event)">
+                  </label>
+               </td>
+               <td style="width:33%">
+                  <label class="uploader" ondragover="return false;" [class.loaded]="loaded" [style.outlineColor]="dragging ? activeColor :
+                  baseColor" (dragenter)="handleDragEnter()" (dragleave)="handleDragLeave()" (drop)="handleDrop($event)">
+                  <i class="icon icon-upload" [style.color]="dragging 
+                     ? ((imageSrc.length > 0) ? overlayColor : activeColor)
+                     : ((imageSrc.length > 0) ? overlayColor : baseColor)"></i>
+                  <img [src]="imageSrc3" (load)="handleImageLoad()" [class.loaded]="imageLoaded" />
+                  <input type="file" id="file3" formControlName="file3" accept="image/*" (change)="handleInputChange($event)">
+                  </label>
+               </td>
+            </tr>
+         </table>
+      <!--</div>-->
+      <br>
+      <br>
+      <div class="row">
+            <div class="col-md-6 divbtn" (click)="agregarLocal()">Agregar Local</div>
+            <div class="col-md-6 divbtn" (click)="cancelar()">Cancelar</div>
+        </div>     
+   </form>
+</div>

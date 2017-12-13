@@ -1,0 +1,57 @@
+<div class="row mislider">
+
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#myCarousel" data-slide-to="1"></li>
+  </ol>
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner">
+    <div class="item active">
+      <img src="../../assets/fondo/logo33.jpg" alt="Los Angeles">
+    </div>
+
+    <div class="item">
+      <img src="../../assets/fondo/slider3.jpg" alt="Chicago">
+    </div>
+
+  <!-- Left and right controls -->
+  <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#myCarousel" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+
+</div>
+
+<div class="row contenido">
+
+<h1 id="titulo">La Farola Express</h1>
+<hr style="width: 70%;">
+<div class="col-md-12 midiv">
+Nuestra propuesta es brindarle un lugar cálido para compartir y disfrutar en familia, con amigos o en reuniones de trabajo.<br>
+Somos especialistas en pizzas, pizzanesas y milanesas. Ademas de las mejores pastas, parrilla, postres y completa carta de vinos.<br> 
+"Lo que te contaron de nosotros es real: nuestros variados platos son todos para compartir!!!"
+<br><br>¡Bienvenidos y que disfruten!
+</div>
+</div>
+
+<div class="row especialrow">
+  <h1 id="titulodos">Nuestra Ubicación</h1>
+<div class="col-md-1">
+</div>
+
+<div class="col-md-10">
+<agm-map [latitude]="lat" [longitude]="lng" [zoom]="15">
+  <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+</agm-map>
+</div>
+<div class="col-md-1">
+</div>
+</div>

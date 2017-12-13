@@ -1,0 +1,124 @@
+ <div class="row">    
+    <div class="row"> 
+      <div class="col-md-2 divbtn" (click)="queveo('e1')">Ventas por Local</div>
+      <div class="col-md-2 divbtn " (click)="queveo('e2')">Ventas por Local/Empleado</div>
+      <div class="col-md-2 divbtn" (click)="queveo('e3')">Clientes-Compras</div>
+      <div class="col-md-2 divbtn" (click)="queveo('e4')">Importes por Día</div>
+      
+    </div>
+    <div class="row">  
+    </div>    
+ </div>          
+<div class="container">
+  <div class="row" *ngIf="e1">
+
+    <div class="col-md-6">   
+      <div class="row">
+        <div class="col-md-4">Direccion</div>
+        <div class="col-md-4">Pedidos Totales</div>
+        <div class="col-md-4">Monto Total</div>
+      </div>
+      <div class="row" *ngFor="let venta of ventasLocal">
+        <div class="col-md-4">{{venta.direccion}}</div>
+        <div class="col-md-4">{{venta.PedidosLocal}}</div>
+        <div class="col-md-4">${{venta.Total}}</div>
+      </div>
+    </div>  
+
+    <div class="col-md-6">   
+      <div style="display: block">
+        <canvas baseChart
+            [data]="pieChartData"
+            [labels]="pieChartLabels"
+            [chartType]="pieChartType"
+            (chartHover)="chartHovered($event)"
+            (chartClick)="chartClicked($event)">
+        </canvas>
+      </div>
+    </div> 
+
+  </div>
+
+  <div class="row" *ngIf="e2">
+
+    <div class="col-md-12">   
+      <div class="row">
+        <div class="col-md-4">Direccion del Local</div>
+        <div class="col-md-2">Nombre</div>
+        <div class="col-md-2">Apellido</div>
+        <div class="col-md-2">Pedidos</div>
+        <div class="col-md-2">Monto Total</div>
+      </div>
+      <div class="row" *ngFor="let empleado of ventasLocalE">
+        <div class="col-md-4">{{empleado.direccion}}</div>
+        <div class="col-md-2">{{empleado.nombre}}</div>
+        <div class="col-md-2">{{empleado.apellido}}</div>
+        <div class="col-md-2">{{empleado.PedidosLocal}}</div>
+        <div class="col-md-2">${{empleado.Total}}</div>
+      </div>
+    </div>  
+
+  </div>
+
+
+  <div class="row" *ngIf="e3">
+
+    <div class="col-md-6">   
+      <div class="row">
+        <div class="col-md-3">Nombre</div>
+        <div class="col-md-3">Apellido</div>
+        <div class="col-md-3">Pedidos</div>
+        <div class="col-md-3">Monto Total</div>
+      </div>
+      <div class="row" *ngFor="let cliente of ventasCliente">
+        <div class="col-md-3">{{cliente.nombre}}</div>
+        <div class="col-md-3">{{cliente.apellido}}</div>
+        <div class="col-md-3">{{cliente.PedidosLocal}}</div>
+        <div class="col-md-3">${{cliente.Total}}</div>
+      </div>
+    </div>  
+
+    <div class="col-md-6">   
+      <div style="display: block">
+      <canvas baseChart
+                [data]="doughnutChartData"
+                [labels]="doughnutChartLabels"
+                [chartType]="doughnutChartType"
+                (chartHover)="chartHovered($event)"
+                (chartClick)="chartClicked($event)"></canvas>
+      </div>
+    </div> 
+
+  </div>
+
+
+  <div class="row" *ngIf="e4">
+
+    <div class="col-md-6">   
+      <div class="row">
+        <div class="col-md-4">Fecha</div>
+        <div class="col-md-4">Pedidos</div>
+        <div class="col-md-4">Total</div>
+      </div>
+      <div class="row" *ngFor="let importe of importesPorDiaLocales">
+        <div class="col-md-4">{{importe.fecha}}</div>
+        <div class="col-md-4">{{importe.PedidosLocal}}</div>
+        <div class="col-md-4">${{importe.Total}}</div>
+      </div>
+    </div>  
+
+    <div class="col-md-6">   
+      <div style="display: block;">
+      <canvas baseChart
+              [datasets]="barChartData"
+              [labels]="barChartLabels"
+              [options]="barChartOptions"
+              [legend]="barChartLegend"
+              [chartType]="barChartType"
+              (chartHover)="chartHovered($event)"
+              (chartClick)="chartClicked($event)"></canvas>
+      </div>
+    </div> 
+
+  </div>
+</div>

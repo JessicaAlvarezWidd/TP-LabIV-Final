@@ -1,0 +1,38 @@
+<div class="row">
+  <div class="col-md-12 divbtn" (click)="mostrar=false"  *ngIf="mostrar && !mostrarModificar"><i class="customicon material-icons left">add</i>Agregar Usuario</div>
+</div>
+<app-alta-usuarios (eventoCliente)="agregarCliente($event)" (eventoEmpleado)="agregarEmpleado($event)"  (eventocancelar)="mostrar=$event" *ngIf="!mostrar && (mostrarModificar==false)"></app-alta-usuarios>
+<app-modificacion-usuarios  [user]="userSeleccionado" [UsuarioOriginal]="userOriginal" (eventocancelar)="mostrarModificar=$event"  (eventoModificar)="modificarUsuario($event)" *ngIf="mostrarModificar"></app-modificacion-usuarios>
+<br>
+<br>
+<div class="container" *ngIf="mostrar && !mostrarModificar">
+  <table *ngIf="mostrar && !mostrarModificar" class="striped highlight centered responsive-table z-depth-2" style="font-size: 20px;">
+    <thead>
+      <tr>
+          <th class="espacio" data-field="nombre">Nombre</th>
+          <th class="espacio" data-field="apellido">Apellido</th>
+          <th class="espacio" data-field="sexo">Sexo</th>
+          <th class="espacio" data-field="email">Email</th>
+          <th class="espacio" data-field="direccio">Direccion</th>
+          <th class="espacio" data-field="telefono">Telefono</th>
+          <th class="espacio" data-field="tipo">Tipo</th>
+          <th *ngIf="tipoUsuario=='Encargado' || tipoUsuario=='Administrador'">Modificar</th>
+          <th *ngIf="tipoUsuario=='Administrador'">Eliminar</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr class="especialtr" *ngFor="let usuario of usuarios">
+        <td class="espacio">{{usuario.nombre}}</td>
+        <td class="espacio">{{usuario.apellido}}</td>
+        <td class="espacio">{{usuario.sexo}}</td>
+        <td class="espacio">{{usuario.email}}</td>
+        <td class="espacio">{{usuario.direccion}}</td>
+        <td class="espacio">{{usuario.telefono}}</td>
+        <td class="espacio">{{usuario.tipo}}</td>
+        <td style="text-align: center;" *ngIf="tipoUsuario=='Encargado' || tipoUsuario=='Administrador'"><a (click)="mostrarFormModificar(usuario)"><i style="color: #f5f57b;" class="material-icons center">mode_edit</i></a></td>
+        <td style="text-align: center;" *ngIf="tipoUsuario=='Administrador'"><a (click)="EliminarUsuario(usuario.id_usuario); $event.stopPropagation()"><i  style="color: black;" class="small material-icons center red-text btndeletecustom">delete</i></a></td>
+      </tr>
+    </tbody>
+  </table>
+</div> 

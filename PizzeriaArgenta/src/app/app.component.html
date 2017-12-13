@@ -1,0 +1,17 @@
+
+    <div class="navbar navbar-default">
+      <ul class="nav navbar-nav" style="border-radius: 0;"> 
+          <li><a routerLink="/Inicio" routerLinkActive="active">Inicio</a></li>         
+          <li *ngIf="tipoUser=='Empleado' || tipoUser=='Encargado' || tipoUser=='Administrador'"><a routerLink="/gestionUsuarios" routerLinkActive="active">Gestion Usuarios</a></li>
+          <li *ngIf="tipoUser=='Encargado' || tipoUser=='Administrador'"><a routerLink="/gestionLocales" routerLinkActive="active">Gestion Locales</a></li>
+          <li *ngIf="tipoUser=='Empleado' || tipoUser=='Encargado'"><a routerLink="/gestionProductos" routerLinkActive="active">Gestion Productos</a></li>
+          <li *ngIf="tipoUser=='Administrador'"><a routerLink="/Estadisticas" routerLinkActive="active">Estadisticas</a></li>
+          <li *ngIf="tipoUser=='Empleado' || tipoUser=='Encargado' || tipoUser=='Cliente'"><a routerLink="/verPedidos" routerLinkActive="active">Ver Pedidos</a></li>
+          <li *ngIf="tipoUser!='Administrador'"><a routerLink="/compraonline" routerLinkActive="active">Compra Online</a></li>
+          <li *ngIf="!noingreso"><a routerLink="/Login" routerLinkActive="active">Login</a></li>
+          <li *ngIf="!noingreso"><a routerLink="/Registro" routerLinkActive="active">Registro</a></li>
+          <li><a routerLink="/Salir" (click)="salir()" routerLinkActive="active">Salir</a></li>
+      </ul>
+    </div>
+<router-outlet></router-outlet>
+ 

@@ -1,0 +1,37 @@
+<div class="row">
+  <div class="col-md-6 divbtn" (click)="mostrar=false" *ngIf="mostrar && !mostrarModificar && (tipoUsuario=='Administrador')" ><i class="customicon material-icons left">add</i>Agregar Local</div>
+  <div class="col-md-6 divbtn" *ngIf=" mostrar && !mostrarModificar && (tipoUsuario=='Encargado' || tipoUsuario=='Administrador')" id="btnCrearCsv" (click)="crearCSV()" value="Bajar CSV"> <i class="material-icons">arrow_downward</i> Bajar CSV</div>
+</div>
+<app-alta-locales (eventoLocal)="agregarLocal($event)"  (eventocancelar)="mostrar=$event" *ngIf="!mostrar && (mostrarModificar==false)"></app-alta-locales>
+<app-modificacion-locales [local]="localSeleccionado"  (eventocancelar)="mostrarModificar=$event"  (eventoLocal)="modificarLocal($event)" *ngIf="mostrarModificar"></app-modificacion-locales>
+<br>
+<br>
+<div class="container" *ngIf="mostrar  && !mostrarModificar">
+  <table *ngIf="mostrar  && !mostrarModificar" class="striped highlight centered responsive-table z-depth-2" style="font-size: 20px;">
+    <thead>
+      <tr>
+          <th class="espacio" data-field="direccion">Direccion</th>
+          <th class="espacio" data-field="encargado">Encargado</th>
+          <th class="espacio" data-field="foto1">Primer Foto</th>
+          <th class="espacio" data-field="foto1">Segunda Foto</th>
+          <th class="espacio" data-field="foto1">Tercer Foto</th>
+          <th >Modificar</th>
+          <th *ngIf="tipoUsuario=='Administrador'">Eliminar</th>
+      </tr>
+      <br>
+       <br>
+    </thead>
+    <tbody>
+      <tr class="especialtr" *ngFor="let local of locales">
+        <td class="espacio">{{local.direccion}}</td>
+        <td class="espacio">{{local.nombre}} {{local.apellido}}</td>
+        <td class="espacio"><img class="imagenlistado" src='{{local.foto1}}' /></td>
+        <td class="espacio"><img class="imagenlistado" src='{{local.foto2}}' /></td>
+        <td class="espacio"><img class="imagenlistado" src='{{local.foto3}}' /></td>
+        <td style="text-align: center;"><a (click)="mostrarFormModificar(local)"><i style="color: #f5f57b;" class="material-icons center">mode_edit</i></a></td>
+        <td style="text-align: center;"*ngIf="tipoUsuario=='Administrador'"><a (click)="EliminarLocal(local.id_local); $event.stopPropagation()"><i style="color: black;" class="small material-icons center red-text btndeletecustom">delete</i></a></td>
+      </tr>
+    </tbody>
+  </table>
+
+</div> 

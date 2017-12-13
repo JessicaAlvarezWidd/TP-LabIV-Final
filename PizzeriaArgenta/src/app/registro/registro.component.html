@@ -1,0 +1,55 @@
+<div class="misforms">
+<div class="labelform"><label>Registro</label></div>
+    <form style="color: white;" [formGroup]="formUsuarios">
+    <div class ="row">
+        <div class ="col-sm-6">
+        <input class="form-control" type="text" formControlName="nombre" placeholder="Nombre" /><br>
+            
+            <div *ngIf="formUsuarios.controls['nombre'].hasError('required') && formUsuarios.controls['nombre'].touched" class="alert alert-danger">Debes agregar tu Nombre</div>
+            <div *ngIf="formUsuarios.controls['nombre'].hasError('minlength') && formUsuarios.controls['nombre'].touched" class="alert alert-danger">Nombre Invalido</div>
+            <div *ngIf="formUsuarios.controls['nombre'].hasError('pattern') && formUsuarios.controls['nombre'].touched" class="alert alert-danger">Solo podes ingresar letras</div>
+        </div> 
+        <div class ="col-sm-6">  
+        <input class="form-control" type="text" formControlName="apellido" placeholder="Apellido"/><br>
+            
+            <div *ngIf="formUsuarios.controls['apellido'].hasError('required') && formUsuarios.controls['apellido'].touched" class="alert alert-danger">Debes agregar tu Apellido</div>
+            <div *ngIf="formUsuarios.controls['apellido'].hasError('minlength') && formUsuarios.controls['apellido'].touched" class="alert alert-danger">Apellido Inválido</div>
+            <div *ngIf="formUsuarios.controls['apellido'].hasError('pattern') && formUsuarios.controls['apellido'].touched" class="alert alert-danger">Solo podes ingresar letras</div>
+        </div>
+    </div>   
+        <input type="radio" value="M" name="sexo" formControlName="sexo" (change)="elegirSexo=false"> Masculino<br>
+        <input type="radio" value="F" name="sexo" formControlName="sexo" (change)="elegirSexo=false"> Femenino<br>
+            
+            <div *ngIf="elegirSexo" class="alert alert-danger">Debes seleccionar el sexo</div>
+
+        <input style="margin-top: 2%;" placeholder="Direccion" autocorrect="off" autocapitalize="off" spellcheck="off" type="text" class="form-control" [(ngModel)]="datoLugar" #search formControlName="direccion">    
+        <br>
+            
+            <div *ngIf="formUsuarios.controls['direccion'].hasError('required') && formUsuarios.controls['direccion'].touched" class="alert alert-danger">Debes agregar tu Direccion</div>
+            <div *ngIf="formUsuarios.controls['direccion'].hasError('pattern') && formUsuarios.controls['direccion'].touched" class="alert alert-danger">Solo podes ingresar letras y/o números</div>
+
+        <input class="form-control" type="text" formControlName="telefono" placeholder="Telefono"/><br>
+
+            <div *ngIf="formUsuarios.controls['telefono'].hasError('required') && formUsuarios.controls['telefono'].touched" class="alert alert-danger">Debes agregar tu Telefono</div>
+            <div *ngIf="formUsuarios.controls['telefono'].hasError('pattern') && formUsuarios.controls['telefono'].touched" class="alert alert-danger">Solo se aceptan Numeros</div>
+            <div *ngIf="formUsuarios.controls['telefono'].hasError('minlength') && formUsuarios.controls['telefono'].touched" class="alert alert-danger">Debe tener como minimo 6 números</div>
+
+        <input class="form-control" type="text" formControlName="email" #email placeholder="Email" (keyup)="verificarEmail(email.value)"/><br>
+
+            <div *ngIf="formUsuarios.controls['email'].hasError('required') && formUsuarios.controls['email'].touched" class="alert alert-danger">Debes agregar tu Email</div>
+            <div *ngIf="formUsuarios.controls['email'].hasError('pattern') && formUsuarios.controls['email'].touched" class="alert alert-danger">Email Inválido</div>
+            <div *ngIf="existeEmail" class="alert alert-danger">Ese email ya esta registrado</div>
+
+        <input class="form-control" type="password" formControlName="password" placeholder="Contraseña"/><br>
+
+            <div *ngIf="formUsuarios.controls['password'].hasError('required') && formUsuarios.controls['password'].touched" class="alert alert-danger">Debes agregar una Contraseña</div>
+            <div *ngIf="formUsuarios.controls['password'].hasError('minlength') && formUsuarios.controls['password'].touched" class="alert alert-danger">Debe tener como minimo 6 caracteres</div>
+
+         <div class="col-sm-12 estilocaptcha">  
+            <recaptcha (resolved)="resolved($event)"  (data-expired-callback)="funcionCallBackError()" siteKey="6LeJ3SoUAAAAAMuA9IX0F_EOs3CRDQ_gaoH7pCve"></recaptcha>  
+            <div *ngIf="advertencia" class="alert alert-danger">Cuidado salteó el captcha</div>      
+        </div>  
+
+        <div (click)="registrar()" class="col-sm-12 divbtn" style="text-align: center;"><button class="btnmio" type="button">Registrarse</button></div>
+    </form>        
+</div>

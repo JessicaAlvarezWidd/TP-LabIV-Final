@@ -1,0 +1,42 @@
+<div class="row">
+  <div class="col-md-6 divbtn" (click)="mostrar=false" *ngIf="mostrar &&  !mostrarModificar"><i class="customicon material-icons left">add</i>Agregar Producto</div>
+    <div class="col-md-6 divbtn" *ngIf=" mostrar &&  !mostrarModificar && (tipoUsuario=='Encargado' || tipoUsuario=='Administrador')" id="btnCrearCsv" (click)="crearCSV()" value="Bajar CSV"> <i class="material-icons">arrow_downward</i> Bajar CSV</div>
+</div>
+<app-alta-productos (evento)="agregarProduco($event)" (eventoCancelar)="mostrar=$event" *ngIf="!mostrar"></app-alta-productos>
+<app-modificar-producto [producto]="productoAmodificar"  *ngIf="mostrarModificar"
+                    (eventCancelar)="mostrarModificar=$event"  (eventoModificar)="modificarProducto($event)" >
+</app-modificar-producto>
+<br>
+<br>
+<!-- font-size: 20px; -->
+<div class="container" *ngIf="mostrar && !mostrarModificar">
+  <table *ngIf="mostrar && !mostrarModificar" class="striped highlight centered responsive-table z-depth-2" style="width : 100%">
+    <thead>
+      <tr>
+        <th class="espacio" data-field="nombre">Nombre</th>
+        <th class="espacio" data-field="foto1">Foto1</th>
+        <th class="espacio" data-field="foto2">Foto2</th>
+        <th class="espacio" data-field="foto3">Foto3</th>
+        <th class="espacio" *ngIf="tipoUsuario=='Encargado'" >Modificar</th>
+        <th class="espacio" *ngIf="tipoUsuario=='Encargado'" >Eliminar</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="especialtr" *ngFor="let prod of productos">
+        <td class="espacio" >{{prod.nombre}}</td>
+        <td>
+          <img class="imagenlistado"  src='{{prod.foto1}}' />
+        </td>
+        <td>
+          <img class="imagenlistado"  src='{{prod.foto2}}' />
+        </td>
+        <td>
+          <img class="imagenlistado"  src="{{prod.foto3}}" />
+        </td>
+        <td style="text-align: center;"  *ngIf="tipoUsuario=='Encargado'"><a (click)="mostrarFormModificar(prod)"><i style="color: #f5f57b;" class="material-icons center">mode_edit</i></a></td>
+        <td style="text-align: center;" *ngIf="tipoUsuario=='Encargado'"><a (click)="eliminarProducto(prod.id_producto); $event.stopPropagation()"><i style="color: black;" class="small material-icons center red-text btndeletecustom">delete</i></a></td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>

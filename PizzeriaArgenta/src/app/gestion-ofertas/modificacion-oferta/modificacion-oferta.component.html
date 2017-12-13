@@ -1,0 +1,39 @@
+<p><div class="jumbotron">
+    <label>Alta de Ofertas</label>
+    <form [formGroup]="formOferta">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <input [(ngModel)]="Oferta.nombre" placeholder="Nombre Oferta" type="text" class="form-control" formControlName="nombre">    
+                    <div *ngIf="formOferta.controls['nombre'].hasError('required') && formOferta.controls['nombre'].touched" class="alert alert-danger">Debes agregar un nombre</div>
+                    <div *ngIf="formOferta.controls['nombre'].hasError('pattern') && formOferta.controls['nombre'].touched" class="alert alert-danger">Solo podes ingresar letras y/o números</div>
+                    <br>
+                </div>
+                <div class="col-md-12">
+                    <input [(ngModel)]="Oferta.descripcion" placeholder="Descripcion" type="text" class="form-control" formControlName="descripcion">    
+                    <div *ngIf="formOferta.controls['descripcion'].hasError('required') && formOferta.controls['descripcion'].touched" class="alert alert-danger">Debes agregar una descripcion</div>
+                    <br>
+                </div>
+                <div class="col-md-12">
+                    <input [(ngModel)]="Oferta.monto" placeholder="Precio" type="text" class="form-control" formControlName="monto">    
+                    <div *ngIf="formOferta.controls['monto'].hasError('required') && formOferta.controls['monto'].touched" class="alert alert-danger">Debes agregar el precio de la oferta</div>
+                    <div *ngIf="formOferta.controls['monto'].hasError('pattern') && formOferta.controls['monto'].touched" class="alert alert-danger">Solo podes ingresar números. Ejemplo: 55 o 55.65</div>
+                    <br>
+                </div>
+            </div>                 
+            <div class="row">
+                <div class="col-md-12">    
+                    <label>Seleccioná Productos</label>
+                    <div class="col-12" *ngFor="let p of productosSel">
+                        <input  (change)="verificarCantProd()" [ngModelOptions]="{standalone: true}" [(ngModel)]="p.checked" name="p.nombre" type="checkbox" value="p.value">{{p.nombre}}
+                    </div>
+                     <div *ngIf="elegirProductos" class="alert alert-danger">Debes seleccionar al menos 1 producto</div>
+                </div>                    
+            </div>
+        </div>             
+        <br>      
+        <button type="button" (click)="modificarOferta()">Modificar Oferta</button>
+        <button type="button" (click)="cancelar()">Cancelar</button>
+    </form>
+        
+</div>

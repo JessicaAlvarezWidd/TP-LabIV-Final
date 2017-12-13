@@ -1,0 +1,85 @@
+<div class="container">
+      <label>Alta de Productos</label>
+<form [formGroup]="formProducto">
+   <table style="width: 100%">
+      <tr>
+         <td>
+            <div class="row">
+               <label class="label label-primary" for="nombre">Nombre</label><br/>
+               <input type="text" style="color:black;"id="nombre" formControlName="nombre" placeholder="Nombre" /><br>
+                <div *ngIf="formProducto.controls['nombre'].hasError('required') && formProducto.controls['nombre'].touched" class="alert alert-danger">Debes agregar un nombre</div>
+                <div *ngIf="formProducto.controls['nombre'].hasError('pattern') && formProducto.controls['nombre'].touched" class="alert alert-danger">Solo podes ingresar letras</div>
+            </div>
+         </td>
+      </tr>
+      <tr>
+         <td>
+            <div class="row">
+               <label class="label label-primary" for="precio">Precio Unitario</label><br/>
+               <input type="text" style="color:black;" id="precio" formControlName="precio" placeholder="Precio Unitario" /><br>
+               <div *ngIf="formProducto.controls['precio'].hasError('required') && formProducto.controls['precio'].touched" class="alert alert-danger">Debes agregar el precio del Producto</div>
+               <div *ngIf="formProducto.controls['precio'].hasError('pattern') && formProducto.controls['precio'].touched" class="alert alert-danger">Solo podes ingresar números. Ejemplo: 55 o 55.65</div>
+            </div>
+         </td>
+      </tr>
+      <tr>
+         <td>
+            <div class="row">
+               <label class="label label-primary">Foto 1</label><br/>
+            </div>
+         </td>
+         <td>
+            <div class="row">
+               <label class="label label-primary">Foto 2</label><br/>
+            </div>
+         </td>
+         <td>
+            <div class="row">
+               <label class="label label-primary">Foto 3</label><br/>
+            </div>
+         </td>
+      </tr>
+      <tr style="width:100%">
+         <td style="width:33%">
+            <label class="uploader" ondragover="return false;" [class.loaded]="loaded" [style.outlineColor]="dragging ? activeColor : baseColor"
+            (dragenter)="handleDragEnter()" (dragleave)="handleDragLeave()" (drop)="handleDrop($event)">
+            <i class="icon icon-upload" [style.color]="dragging 
+               ? ((imageSrc.length > 0) ? overlayColor : activeColor)
+               : ((imageSrc.length > 0) ? overlayColor : baseColor)"></i>
+            <img [src]="imageSrc" (load)="handleImageLoad()" [class.loaded]="imageLoaded" />
+            <input type="file" id="file1" formControlName="file1" accept="image/*"
+               (change)="handleInputChange($event)">
+            </label>
+         </td>
+         <td style="width:33%">
+            <label class="uploader" ondragover="return false;" [class.loaded]="loaded" [style.outlineColor]="dragging ? activeColor : baseColor"
+            (dragenter)="handleDragEnter()" (dragleave)="handleDragLeave()" (drop)="handleDrop($event)">
+            <i class="icon icon-upload" [style.color]="dragging 
+               ? ((imageSrc.length > 0) ? overlayColor : activeColor)
+               : ((imageSrc.length > 0) ? overlayColor : baseColor)"></i>
+            <img [src]="imageSrc2" (load)="handleImageLoad()" [class.loaded]="imageLoaded" />
+            <input type="file" id="file2" formControlName="file2" accept="image/*"
+               (change)="handleInputChange($event)">
+            </label>
+         </td>
+         <td style="width:33%">
+            <label class="uploader" ondragover="return false;" [class.loaded]="loaded" [style.outlineColor]="dragging ? activeColor :
+            baseColor" (dragenter)="handleDragEnter()" (dragleave)="handleDragLeave()"
+            (drop)="handleDrop($event)">
+            <i class="icon icon-upload" [style.color]="dragging 
+               ? ((imageSrc.length > 0) ? overlayColor : activeColor)
+               : ((imageSrc.length > 0) ? overlayColor : baseColor)"></i>
+            <img [src]="imageSrc3" (load)="handleImageLoad()" [class.loaded]="imageLoaded" />
+            <input type="file" id="file3" formControlName="file3" accept="image/*" (change)="handleInputChange($event)">
+            </label>
+         </td>
+      </tr>
+   </table>
+   <br>
+   <br>
+    <div class="row">
+        <div class="col-md-6 divbtn" (click)="agregarProducto()">Agregar Producto</div>
+        <div class="col-md-6 divbtn" (click)="cancelar()">Cancelar</div>
+    </div>     
+</form>
+</div>

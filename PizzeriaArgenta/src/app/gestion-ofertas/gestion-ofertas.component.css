@@ -1,0 +1,8 @@
+i.material-icons:hover{
+    cursor: pointer;
+}
+.customicon{
+        margin-right: 9px !important;
+        font-weight: bold;
+        font-size: 1.5rem;
+}

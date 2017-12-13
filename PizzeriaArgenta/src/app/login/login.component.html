@@ -1,0 +1,36 @@
+<div class="misforms">
+<div class="labelform"><label>Ingreso</label></div>
+  <form  [formGroup]="formIngreso">     
+    <div class="form-group row" >        
+      <div class="col-sm-12">
+        <input [(ngModel)]="user.email" class="form-control" type="text" formControlName="email" placeholder="Email"/><br>
+
+          <div *ngIf="formIngreso.controls['email'].hasError('required') && formIngreso.controls['email'].touched" class="alert alert-danger">Debes agregar tu Email</div>
+          <div *ngIf="formIngreso.controls['email'].hasError('pattern') && formIngreso.controls['email'].touched" class="alert alert-danger">Email Inválido</div>
+      
+      </div>
+      <div class="col-sm-12">   
+        <input [(ngModel)]="user.password" class="form-control" type="password" formControlName="password" placeholder="Contraseña"/><br>
+
+          <div *ngIf="formIngreso.controls['password'].hasError('required') && formIngreso.controls['password'].touched" class="alert alert-danger">Debes agregar una Contraseña</div>
+          <div *ngIf="formIngreso.controls['password'].hasError('minlength') && formIngreso.controls['password'].touched" class="alert alert-danger">Debe tener como minimo 6 caracteres</div>      
+      
+      </div>
+        <div (click)="ingresar()" class="col-sm-12 divbtn btnmio" style="text-align: center;">Ingresar</div>
+      
+    </div>
+  </form>
+</div>
+
+<div class="row misforms">    
+    
+    <div class="col-md-12">
+      
+      <div class="row divbtn especialbtn btnmio" (click)="queuser('cliente')" >Cliente</div>
+      <div class="row divbtn especialbtn btnmio" (click)="queuser('empleado')">Empleado</div>
+      <div class="row divbtn especialbtn btnmio" (click)="queuser('encargado')">Encargado</div>
+      <div class="row divbtn especialbtn btnmio" (click)="queuser('administrativo')">Administrador</div>
+    </div>      
+    
+</div>
+

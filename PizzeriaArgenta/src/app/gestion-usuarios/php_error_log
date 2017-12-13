@@ -1,0 +1,199 @@
+
+
+
+
+[28-Jul-2017 01:35:34 America/Argentina/Buenos_Aires] PHP Fatal error:  Call to undefined method stdClass::withHeader() in C:\xampp\htdocs\api_rest\index.php on line 138
+[28-Jul-2017 01:40:39 America/Argentina/Buenos_Aires] PHP Fatal error:  Call to undefined method stdClass::withHeader() in C:\xampp\htdocs\api_rest\index.php on line 138
+[28-Jul-2017 01:41:30 America/Argentina/Buenos_Aires] PHP Fatal error:  Call to undefined method stdClass::withHeader() in C:\xampp\htdocs\api_rest\index.php on line 138
+[28-Jul-2017 01:54:34 America/Argentina/Buenos_Aires] PHP Fatal error:  Call to undefined method stdClass::withHeader() in C:\xampp\htdocs\api_rest\index.php on line 138
+[28-Jul-2017 01:54:51 America/Argentina/Buenos_Aires] PHP Fatal error:  Call to undefined method stdClass::withHeader() in C:\xampp\htdocs\api_rest\index.php on line 138
+[28-Jul-2017 01:55:25 America/Argentina/Buenos_Aires] PHP Fatal error:  Call to undefined method stdClass::withHeader() in C:\xampp\htdocs\api_rest\index.php on line 138
+[28-Jul-2017 02:03:01 America/Argentina/Buenos_Aires] Slim Application Error:
+Type: FastRoute\BadRouteException
+Message: Cannot register two routes matching &quot;/eliminarUsuario&quot; for method &quot;DELETE&quot;
+File: C:\xampp\htdocs\api_rest\vendor\nikic\fast-route\src\DataGenerator\RegexBasedAbstract.php
+Line: 55
+Trace: #0 C:\xampp\htdocs\api_rest\vendor\nikic\fast-route\src\DataGenerator\RegexBasedAbstract.php(18): FastRoute\DataGenerator\RegexBasedAbstract->addStaticRoute('DELETE', Array, 'route14')
+#1 C:\xampp\htdocs\api_rest\vendor\nikic\fast-route\src\RouteCollector.php(36): FastRoute\DataGenerator\RegexBasedAbstract->addRoute('DELETE', Array, 'route14')
+#2 C:\xampp\htdocs\api_rest\vendor\slim\slim\Slim\Router.php(227): FastRoute\RouteCollector->addRoute(Array, '/eliminarUsuari...', 'route14')
+#3 C:\xampp\htdocs\api_rest\vendor\nikic\fast-route\src\functions.php(24): Slim\Router->Slim\{closure}(Object(FastRoute\RouteCollector))
+#4 C:\xampp\htdocs\api_rest\vendor\slim\slim\Slim\Router.php(239): FastRoute\simpleDispatcher(Object(Closure), Array)
+#5 C:\xampp\htdocs\api_rest\vendor\slim\slim\Slim\Router.php(191): Slim\Router->createDispatcher()
+#6 C:\xampp\htdocs\api_rest\vendor\slim\slim\Slim\App.php(546): Slim\Router->dispatch(Object(Slim\Http\Request))
+#7 C:\xampp\htdocs\api_rest\vendor\slim\slim\Slim\App.php(470): Slim\App->dispatchRouterAndPrepareRoute(Object(Slim\Http\Request), Object(Slim\Router))
+#8 C:\xampp\htdocs\api_rest\index.php(20): Slim\App->__invoke(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#9 [internal function]: Closure->{closure}(Object(Slim\Http\Request), Object(Slim\Http\Response), Object(Slim\App))
+#10 C:\xampp\htdocs\api_rest\vendor\slim\slim\Slim\DeferredCallable.php(43): call_user_func_array(Object(Closure), Array)
+#11 [internal function]: Slim\DeferredCallable->__invoke(Object(Slim\Http\Request), Object(Slim\Http\Response), Object(Slim\App))
+#12 C:\xampp\htdocs\api_rest\vendor\slim\slim\Slim\MiddlewareAwareTrait.php(73): call_user_func(Object(Slim\DeferredCallable), Object(Slim\Http\Request), Object(Slim\Http\Response), Object(Slim\App))
+#13 C:\xampp\htdocs\api_rest\vendor\slim\slim\Slim\MiddlewareAwareTrait.php(122): Slim\App->Slim\{closure}(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#14 C:\xampp\htdocs\api_rest\vendor\slim\slim\Slim\App.php(370): Slim\App->callMiddlewareStack(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#15 C:\xampp\htdocs\api_rest\vendor\slim\slim\Slim\App.php(295): Slim\App->process(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#16 C:\xampp\htdocs\api_rest\index.php(394): Slim\App->run()
+#17 {main}
+View in rendered output by enabling the "displayErrorDetails" setting.
+
+[30-Jul-2017 20:51:25 America/Argentina/Buenos_Aires] PHP Fatal error:  Call to undefined method Cliente::TraerClienteId() in C:\xampp\htdocs\api_rest\index.php on line 489
+[30-Jul-2017 20:59:37 America/Argentina/Buenos_Aires] PHP Fatal error:  Call to undefined method Cliente::TraerClienteId() in C:\xampp\htdocs\api_rest\index.php on line 489
+[31-Jul-2017 15:41:36 America/Argentina/Buenos_Aires] Slim Application Error:
+Type: FastRoute\BadRouteException
+Message: Cannot register two routes matching &quot;/agregarLocal&quot; for method &quot;POST&quot;
+File: C:\xampp\htdocs\api_rest\vendor\nikic\fast-route\src\DataGenerator\RegexBasedAbstract.php
+Line: 55
+Trace: #0 C:\xampp\htdocs\api_rest\vendor\nikic\fast-route\src\DataGenerator\RegexBasedAbstract.php(18): FastRoute\DataGenerator\RegexBasedAbstract->addStaticRoute('POST', Array, 'route8')
+#1 C:\xampp\htdocs\api_rest\vendor\nikic\fast-route\src\RouteCollector.php(36): FastRoute\DataGenerator\RegexBasedAbstract->addRoute('POST', Array, 'route8')
+#2 C:\xampp\htdocs\api_rest\vendor\slim\slim\Slim\Router.php(227): FastRoute\RouteCollector->addRoute(Array, '/agregarLocal', 'route8')
+#3 C:\xampp\htdocs\api_rest\vendor\nikic\fast-route\src\functions.php(24): Slim\Router->Slim\{closure}(Object(FastRoute\RouteCollector))
+#4 C:\xampp\htdocs\api_rest\vendor\slim\slim\Slim\Router.php(239): FastRoute\simpleDispatcher(Object(Closure), Array)
+#5 C:\xampp\htdocs\api_rest\vendor\slim\slim\Slim\Router.php(191): Slim\Router->createDispatcher()
+#6 C:\xampp\htdocs\api_rest\vendor\slim\slim\Slim\App.php(546): Slim\Router->dispatch(Object(Slim\Http\Request))
+#7 C:\xampp\htdocs\api_rest\vendor\slim\slim\Slim\App.php(470): Slim\App->dispatchRouterAndPrepareRoute(Object(Slim\Http\Request), Object(Slim\Router))
+#8 C:\xampp\htdocs\api_rest\index.php(21): Slim\App->__invoke(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#9 [internal function]: Closure->{closure}(Object(Slim\Http\Request), Object(Slim\Http\Response), Object(Slim\App))
+#10 C:\xampp\htdocs\api_rest\vendor\slim\slim\Slim\DeferredCallable.php(43): call_user_func_array(Object(Closure), Array)
+#11 [internal function]: Slim\DeferredCallable->__invoke(Object(Slim\Http\Request), Object(Slim\Http\Response), Object(Slim\App))
+#12 C:\xampp\htdocs\api_rest\vendor\slim\slim\Slim\MiddlewareAwareTrait.php(73): call_user_func(Object(Slim\DeferredCallable), Object(Slim\Http\Request), Object(Slim\Http\Response), Object(Slim\App))
+#13 C:\xampp\htdocs\api_rest\vendor\slim\slim\Slim\MiddlewareAwareTrait.php(122): Slim\App->Slim\{closure}(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#14 C:\xampp\htdocs\api_rest\vendor\slim\slim\Slim\App.php(370): Slim\App->callMiddlewareStack(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#15 C:\xampp\htdocs\api_rest\vendor\slim\slim\Slim\App.php(295): Slim\App->process(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#16 C:\xampp\htdocs\api_rest\index.php(600): Slim\App->run()
+#17 {main}
+View in rendered output by enabling the "displayErrorDetails" setting.
+
+[31-Jul-2017 15:42:29 America/Argentina/Buenos_Aires] Slim Application Error:
+Type: FastRoute\BadRouteException
+Message: Cannot register two routes matching &quot;/agregarLocal&quot; for method &quot;POST&quot;
+File: C:\xampp\htdocs\api_rest\vendor\nikic\fast-route\src\DataGenerator\RegexBasedAbstract.php
+Line: 55
+Trace: #0 C:\xampp\htdocs\api_rest\vendor\nikic\fast-route\src\DataGenerator\RegexBasedAbstract.php(18): FastRoute\DataGenerator\RegexBasedAbstract->addStaticRoute('POST', Array, 'route8')
+#1 C:\xampp\htdocs\api_rest\vendor\nikic\fast-route\src\RouteCollector.php(36): FastRoute\DataGenerator\RegexBasedAbstract->addRoute('POST', Array, 'route8')
+#2 C:\xampp\htdocs\api_rest\vendor\slim\slim\Slim\Router.php(227): FastRoute\RouteCollector->addRoute(Array, '/agregarLocal', 'route8')
+#3 C:\xampp\htdocs\api_rest\vendor\nikic\fast-route\src\functions.php(24): Slim\Router->Slim\{closure}(Object(FastRoute\RouteCollector))
+#4 C:\xampp\htdocs\api_rest\vendor\slim\slim\Slim\Router.php(239): FastRoute\simpleDispatcher(Object(Closure), Array)
+#5 C:\xampp\htdocs\api_rest\vendor\slim\slim\Slim\Router.php(191): Slim\Router->createDispatcher()
+#6 C:\xampp\htdocs\api_rest\vendor\slim\slim\Slim\App.php(546): Slim\Router->dispatch(Object(Slim\Http\Request))
+#7 C:\xampp\htdocs\api_rest\vendor\slim\slim\Slim\App.php(470): Slim\App->dispatchRouterAndPrepareRoute(Object(Slim\Http\Request), Object(Slim\Router))
+#8 C:\xampp\htdocs\api_rest\index.php(21): Slim\App->__invoke(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#9 [internal function]: Closure->{closure}(Object(Slim\Http\Request), Object(Slim\Http\Response), Object(Slim\App))
+#10 C:\xampp\htdocs\api_rest\vendor\slim\slim\Slim\DeferredCallable.php(43): call_user_func_array(Object(Closure), Array)
+#11 [internal function]: Slim\DeferredCallable->__invoke(Object(Slim\Http\Request), Object(Slim\Http\Response), Object(Slim\App))
+#12 C:\xampp\htdocs\api_rest\vendor\slim\slim\Slim\MiddlewareAwareTrait.php(73): call_user_func(Object(Slim\DeferredCallable), Object(Slim\Http\Request), Object(Slim\Http\Response), Object(Slim\App))
+#13 C:\xampp\htdocs\api_rest\vendor\slim\slim\Slim\MiddlewareAwareTrait.php(122): Slim\App->Slim\{closure}(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#14 C:\xampp\htdocs\api_rest\vendor\slim\slim\Slim\App.php(370): Slim\App->callMiddlewareStack(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#15 C:\xampp\htdocs\api_rest\vendor\slim\slim\Slim\App.php(295): Slim\App->process(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#16 C:\xampp\htdocs\api_rest\index.php(600): Slim\App->run()
+#17 {main}
+View in rendered output by enabling the "displayErrorDetails" setting.
+
+[31-Jul-2017 15:53:14 America/Argentina/Buenos_Aires] PHP Fatal error:  Class 'Oferta' not found in C:\xampp\htdocs\api_rest\index.php on line 284
+[31-Jul-2017 15:54:22 America/Argentina/Buenos_Aires] PHP Fatal error:  Class 'Oferta' not found in C:\xampp\htdocs\api_rest\index.php on line 284
+[31-Jul-2017 16:11:00 America/Argentina/Buenos_Aires] PHP Fatal error:  Class 'Oferta' not found in C:\xampp\htdocs\api_rest\index.php on line 284
+[31-Jul-2017 16:11:03 America/Argentina/Buenos_Aires] PHP Fatal error:  Class 'Oferta' not found in C:\xampp\htdocs\api_rest\index.php on line 367
+[31-Jul-2017 16:11:12 America/Argentina/Buenos_Aires] PHP Fatal error:  Class 'Oferta' not found in C:\xampp\htdocs\api_rest\index.php on line 367
+[31-Jul-2017 16:14:02 America/Argentina/Buenos_Aires] PHP Fatal error:  Class 'Oferta' not found in C:\xampp\htdocs\api_rest\index.php on line 367
+[31-Jul-2017 16:19:00 America/Argentina/Buenos_Aires] PHP Fatal error:  Class 'Oferta' not found in C:\xampp\htdocs\api_rest\index.php on line 367
+[31-Jul-2017 16:59:44 America/Argentina/Buenos_Aires] PHP Fatal error:  Class 'Oferta' not found in C:\xampp\htdocs\api_rest\index.php on line 285
+[31-Jul-2017 17:04:59 America/Argentina/Buenos_Aires] Slim Application Error:
+Type: PDOException
+Code: HY000
+Message: SQLSTATE[HY000]: General error: 2031 
+File: C:\xampp\htdocs\api_rest\Clases\Pedido.php
+Line: 67
+Trace: #0 C:\xampp\htdocs\api_rest\Clases\Pedido.php(67): PDOStatement->execute()
+#1 C:\xampp\htdocs\api_rest\index.php(163): Pedido->InsertarPedido(Array)
+#2 [internal function]: Closure->{closure}(Object(Slim\Http\Request), Object(Slim\Http\Response), Array)
+#3 C:\xampp\htdocs\api_rest\vendor\slim\slim\Slim\Handlers\Strategies\RequestResponse.php(41): call_user_func(Object(Closure), Object(Slim\Http\Request), Object(Slim\Http\Response), Array)
+#4 C:\xampp\htdocs\api_rest\vendor\slim\slim\Slim\Route.php(344): Slim\Handlers\Strategies\RequestResponse->__invoke(Object(Closure), Object(Slim\Http\Request), Object(Slim\Http\Response), Array)
+#5 C:\xampp\htdocs\api_rest\vendor\slim\slim\Slim\MiddlewareAwareTrait.php(122): Slim\Route->__invoke(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#6 C:\xampp\htdocs\api_rest\vendor\slim\slim\Slim\Route.php(316): Slim\Route->callMiddlewareStack(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#7 C:\xampp\htdocs\api_rest\vendor\slim\slim\Slim\App.php(476): Slim\Route->run(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#8 C:\xampp\htdocs\api_rest\index.php(22): Slim\App->__invoke(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#9 [internal function]: Closure->{closure}(Object(Slim\Http\Request), Object(Slim\Http\Response), Object(Slim\App))
+#10 C:\xampp\htdocs\api_rest\vendor\slim\slim\Slim\DeferredCallable.php(43): call_user_func_array(Object(Closure), Array)
+#11 [internal function]: Slim\DeferredCallable->__invoke(Object(Slim\Http\Request), Object(Slim\Http\Response), Object(Slim\App))
+#12 C:\xampp\htdocs\api_rest\vendor\slim\slim\Slim\MiddlewareAwareTrait.php(73): call_user_func(Object(Slim\DeferredCallable), Object(Slim\Http\Request), Object(Slim\Http\Response), Object(Slim\App))
+#13 C:\xampp\htdocs\api_rest\vendor\slim\slim\Slim\MiddlewareAwareTrait.php(122): Slim\App->Slim\{closure}(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#14 C:\xampp\htdocs\api_rest\vendor\slim\slim\Slim\App.php(370): Slim\App->callMiddlewareStack(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#15 C:\xampp\htdocs\api_rest\vendor\slim\slim\Slim\App.php(295): Slim\App->process(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#16 C:\xampp\htdocs\api_rest\index.php(599): Slim\App->run()
+#17 {main}
+View in rendered output by enabling the "displayErrorDetails" setting.
+
+[31-Jul-2017 17:06:24 America/Argentina/Buenos_Aires] Slim Application Error:
+Type: PDOException
+Code: HY000
+Message: SQLSTATE[HY000]: General error: 2031 
+File: C:\xampp\htdocs\api_rest\Clases\Pedido.php
+Line: 67
+Trace: #0 C:\xampp\htdocs\api_rest\Clases\Pedido.php(67): PDOStatement->execute()
+#1 C:\xampp\htdocs\api_rest\index.php(163): Pedido->InsertarPedido(Array)
+#2 [internal function]: Closure->{closure}(Object(Slim\Http\Request), Object(Slim\Http\Response), Array)
+#3 C:\xampp\htdocs\api_rest\vendor\slim\slim\Slim\Handlers\Strategies\RequestResponse.php(41): call_user_func(Object(Closure), Object(Slim\Http\Request), Object(Slim\Http\Response), Array)
+#4 C:\xampp\htdocs\api_rest\vendor\slim\slim\Slim\Route.php(344): Slim\Handlers\Strategies\RequestResponse->__invoke(Object(Closure), Object(Slim\Http\Request), Object(Slim\Http\Response), Array)
+#5 C:\xampp\htdocs\api_rest\vendor\slim\slim\Slim\MiddlewareAwareTrait.php(122): Slim\Route->__invoke(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#6 C:\xampp\htdocs\api_rest\vendor\slim\slim\Slim\Route.php(316): Slim\Route->callMiddlewareStack(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#7 C:\xampp\htdocs\api_rest\vendor\slim\slim\Slim\App.php(476): Slim\Route->run(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#8 C:\xampp\htdocs\api_rest\index.php(22): Slim\App->__invoke(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#9 [internal function]: Closure->{closure}(Object(Slim\Http\Request), Object(Slim\Http\Response), Object(Slim\App))
+#10 C:\xampp\htdocs\api_rest\vendor\slim\slim\Slim\DeferredCallable.php(43): call_user_func_array(Object(Closure), Array)
+#11 [internal function]: Slim\DeferredCallable->__invoke(Object(Slim\Http\Request), Object(Slim\Http\Response), Object(Slim\App))
+#12 C:\xampp\htdocs\api_rest\vendor\slim\slim\Slim\MiddlewareAwareTrait.php(73): call_user_func(Object(Slim\DeferredCallable), Object(Slim\Http\Request), Object(Slim\Http\Response), Object(Slim\App))
+#13 C:\xampp\htdocs\api_rest\vendor\slim\slim\Slim\MiddlewareAwareTrait.php(122): Slim\App->Slim\{closure}(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#14 C:\xampp\htdocs\api_rest\vendor\slim\slim\Slim\App.php(370): Slim\App->callMiddlewareStack(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#15 C:\xampp\htdocs\api_rest\vendor\slim\slim\Slim\App.php(295): Slim\App->process(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#16 C:\xampp\htdocs\api_rest\index.php(599): Slim\App->run()
+#17 {main}
+View in rendered output by enabling the "displayErrorDetails" setting.
+
+[31-Jul-2017 17:10:16 America/Argentina/Buenos_Aires] Slim Application Error:
+Type: PDOException
+Code: HY000
+Message: SQLSTATE[HY000]: General error: 2031 
+File: C:\xampp\htdocs\api_rest\Clases\Pedido.php
+Line: 67
+Trace: #0 C:\xampp\htdocs\api_rest\Clases\Pedido.php(67): PDOStatement->execute()
+#1 C:\xampp\htdocs\api_rest\index.php(163): Pedido->InsertarPedido(Array)
+#2 [internal function]: Closure->{closure}(Object(Slim\Http\Request), Object(Slim\Http\Response), Array)
+#3 C:\xampp\htdocs\api_rest\vendor\slim\slim\Slim\Handlers\Strategies\RequestResponse.php(41): call_user_func(Object(Closure), Object(Slim\Http\Request), Object(Slim\Http\Response), Array)
+#4 C:\xampp\htdocs\api_rest\vendor\slim\slim\Slim\Route.php(344): Slim\Handlers\Strategies\RequestResponse->__invoke(Object(Closure), Object(Slim\Http\Request), Object(Slim\Http\Response), Array)
+#5 C:\xampp\htdocs\api_rest\vendor\slim\slim\Slim\MiddlewareAwareTrait.php(122): Slim\Route->__invoke(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#6 C:\xampp\htdocs\api_rest\vendor\slim\slim\Slim\Route.php(316): Slim\Route->callMiddlewareStack(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#7 C:\xampp\htdocs\api_rest\vendor\slim\slim\Slim\App.php(476): Slim\Route->run(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#8 C:\xampp\htdocs\api_rest\index.php(22): Slim\App->__invoke(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#9 [internal function]: Closure->{closure}(Object(Slim\Http\Request), Object(Slim\Http\Response), Object(Slim\App))
+#10 C:\xampp\htdocs\api_rest\vendor\slim\slim\Slim\DeferredCallable.php(43): call_user_func_array(Object(Closure), Array)
+#11 [internal function]: Slim\DeferredCallable->__invoke(Object(Slim\Http\Request), Object(Slim\Http\Response), Object(Slim\App))
+#12 C:\xampp\htdocs\api_rest\vendor\slim\slim\Slim\MiddlewareAwareTrait.php(73): call_user_func(Object(Slim\DeferredCallable), Object(Slim\Http\Request), Object(Slim\Http\Response), Object(Slim\App))
+#13 C:\xampp\htdocs\api_rest\vendor\slim\slim\Slim\MiddlewareAwareTrait.php(122): Slim\App->Slim\{closure}(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#14 C:\xampp\htdocs\api_rest\vendor\slim\slim\Slim\App.php(370): Slim\App->callMiddlewareStack(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#15 C:\xampp\htdocs\api_rest\vendor\slim\slim\Slim\App.php(295): Slim\App->process(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#16 C:\xampp\htdocs\api_rest\index.php(599): Slim\App->run()
+#17 {main}
+View in rendered output by enabling the "displayErrorDetails" setting.
+
+[31-Jul-2017 17:11:57 America/Argentina/Buenos_Aires] Slim Application Error:
+Type: PDOException
+Code: HY000
+Message: SQLSTATE[HY000]: General error: 2031 
+File: C:\xampp\htdocs\api_rest\Clases\Pedido.php
+Line: 67
+Trace: #0 C:\xampp\htdocs\api_rest\Clases\Pedido.php(67): PDOStatement->execute()
+#1 C:\xampp\htdocs\api_rest\index.php(163): Pedido->InsertarPedido(Array)
+#2 [internal function]: Closure->{closure}(Object(Slim\Http\Request), Object(Slim\Http\Response), Array)
+#3 C:\xampp\htdocs\api_rest\vendor\slim\slim\Slim\Handlers\Strategies\RequestResponse.php(41): call_user_func(Object(Closure), Object(Slim\Http\Request), Object(Slim\Http\Response), Array)
+#4 C:\xampp\htdocs\api_rest\vendor\slim\slim\Slim\Route.php(344): Slim\Handlers\Strategies\RequestResponse->__invoke(Object(Closure), Object(Slim\Http\Request), Object(Slim\Http\Response), Array)
+#5 C:\xampp\htdocs\api_rest\vendor\slim\slim\Slim\MiddlewareAwareTrait.php(122): Slim\Route->__invoke(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#6 C:\xampp\htdocs\api_rest\vendor\slim\slim\Slim\Route.php(316): Slim\Route->callMiddlewareStack(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#7 C:\xampp\htdocs\api_rest\vendor\slim\slim\Slim\App.php(476): Slim\Route->run(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#8 C:\xampp\htdocs\api_rest\index.php(22): Slim\App->__invoke(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#9 [internal function]: Closure->{closure}(Object(Slim\Http\Request), Object(Slim\Http\Response), Object(Slim\App))
+#10 C:\xampp\htdocs\api_rest\vendor\slim\slim\Slim\DeferredCallable.php(43): call_user_func_array(Object(Closure), Array)
+#11 [internal function]: Slim\DeferredCallable->__invoke(Object(Slim\Http\Request), Object(Slim\Http\Response), Object(Slim\App))
+#12 C:\xampp\htdocs\api_rest\vendor\slim\slim\Slim\MiddlewareAwareTrait.php(73): call_user_func(Object(Slim\DeferredCallable), Object(Slim\Http\Request), Object(Slim\Http\Response), Object(Slim\App))
+#13 C:\xampp\htdocs\api_rest\vendor\slim\slim\Slim\MiddlewareAwareTrait.php(122): Slim\App->Slim\{closure}(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#14 C:\xampp\htdocs\api_rest\vendor\slim\slim\Slim\App.php(370): Slim\App->callMiddlewareStack(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#15 C:\xampp\htdocs\api_rest\vendor\slim\slim\Slim\App.php(295): Slim\App->process(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#16 C:\xampp\htdocs\api_rest\index.php(599): Slim\App->run()
+#17 {main}
+View in rendered output by enabling the "displayErrorDetails" setting.
+
