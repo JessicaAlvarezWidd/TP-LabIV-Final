@@ -4,7 +4,7 @@
 </div>
 <h1>Screen del Sistema</h1><br>
 <img src='https://github.com/JessicaAlvarezWidd/TP-LabIV-Final/blob/master/ayudaScreen/inicio.jpg'/><br>
-http://jessicaalvarez.hol.es/Inicio<br>
+http://jessicaalvarez.hol.es<br>
 <h1>Usuario sin Registro</h1><br>
 <div>
 Al entrar a la pagina se puede navegar sin necesidad de registrarse o logearse. En el inicio se muestra fotos de la pizzeria y una breve descripcion de la misma. El invitado puede ver los locales disponibles y los productos que cada local comercializa. No podra generar ningun pedido ya que para eso necesitara estar registrado y logearse sin excepcion.
