@@ -16,7 +16,7 @@ El usuario invitado tiene la posiblidad de registrarse completando un formulario
 </div>
 <h1>Login</h1><br>
 <div>
-Al momente de logearse si se ingresan el email y/o el password correcto este segenera un token, en caso contrario se le avisara al usuario con un mensaje sobre el ingreso de datos incorrectos. 
+Al momente de logearse si se ingresan el email y el password correcto este segenera un token, en caso contrario se le avisara al usuario con un mensaje sobre el ingreso de datos incorrectos. 
 En el login se encuentran botones de acceso rapido que le permiten al usuario la posiblidad de logearse como un usuario de tipo cliente, empleado, encargado y administrador.
 </div>
 <h1>Operatoria Cliente</h1><br>
